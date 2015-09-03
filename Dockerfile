@@ -7,14 +7,14 @@ RUN apt-get update && \
 
 RUN go get github.com/tools/godep github.com/codegangsta/gin 
 
-RUN mkdir -p /etc/service/doorbot-api && mkdir -p /go/src/bitbucket.org/msamson/doorbot-api
+RUN mkdir -p /etc/service/doorbot && mkdir -p /go/src/github.com/masom/doorbot
 
-WORKDIR /go/src/bitbucket.org/msamson/doorbot-api
+WORKDIR /go/src/github.com/masom/doorbot
 
-COPY ./Godeps /go/src/bitbucket.org/msamson/doorbot-api/Godeps
+COPY ./Godeps /go/src/github.com/masom/doorbot/Godeps
 RUN godep restore
 
-COPY . /go/src/bitbucket.org/msamson/doorbot-api
+COPY . /go/src/github.com/masom/doorbot
 
 RUN go-wrapper download && \
     go-wrapper install
