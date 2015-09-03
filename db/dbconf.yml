@@ -1,0 +1,7 @@
+development:
+    driver: postgres
+    open: $DOORBOT_DATABASE_URL
+
+heroku:
+    driver: postgres
+    open: $DATABASE_URL

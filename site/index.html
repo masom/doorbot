@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <body>
+    <h1>DOORMAN</h1>
+        <form id="register" action="/api/accounts/register" method="POST">
+            <input name="name" placeholder="Account name"/>
+            <input name="host" placeholder="Desired subdomain" />
+            <input name="contact_name" placeholder="Contact name" />
+            <input name="contact_email" placeholder="Contact email" />
+            <input name="contact_phone_number" placeholder="Contact phone #" />
+            <button type="submit">Register</button>
+        </form>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                var form = document.querySelector("#register");
+
+                form.addEventListener("submit", function(e) {
+                    e.preventDefault();
+
+                    var payload = JSON.stringify({
+                        Account: {
+                            name: document.querySelector("input[name=name]").value,
+                            host: document.querySelector("input[name=host]").value,
+                            contact_name: document.querySelector("input[name=contact_name]").value,
+                            contact_email: document.querySelector("input[name=contact_email]").value,
+                            contact_phone_number: document.querySelector("input[name=contact_phone_number]").value
+                        }
+                    });
+
+                    var request = new XMLHttpRequest();
+                    request.open('POST', form.getAttribute('action'), true);
+                    request.setRequestHeader('Content-Type', 'application/json');
+                    request.setRequestHeader('Authorization', 'dashboard gatekeeper');
+
+                    request.onreadystatechange = function() {
+                        if (request.readyState!=4) {
+                            return;
+                        }
+
+                        console.log(request.status);
+                    };
+                    request.send(payload);
+
+                    return false;
+                });
+            });
+        </script>
+    </body>
+</html>

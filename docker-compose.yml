@@ -1,0 +1,38 @@
+db:
+    image: postgres:9.3
+    ports:
+        - "5432:5432"
+    environment:
+        - POSTGRES_PASSWORD=dev
+
+web:
+    build: ./ops/nginx
+    links:
+        - app:app
+    ports:
+        - "80:80"
+    volumes:
+        - ./site:/var/www/site
+
+app:
+    build: .
+    volumes:
+        - .:/go/src/github.com/masom/doorbot
+    ports:
+        - "3000:3000"
+    links:
+        - db:database
+    environment:
+        - DOORBOT_DEBUG=true
+        - DOORBOT_DATABASE_URL=postgres://postgres:dev@database?sslmode=disable
+        - DOORBOT_DATABASE_TRACE=true
+        - DOORBOT_NOTIFICATOR_ENABLED
+        - DOORBOT_NOTIFICATOR_EMAIL_ENABLED
+        - DOORBOT_NOTIFICATOR_SMS_ENABLED
+        - DOORBOT_NOTIFICATOR_POSTMARK_ENABLE
+        - DOORBOT_NOTIFICATOR_POSTMARK_TOKEN
+        - DOORBOT_NOTIFICATOR_TWILIO_PHONE_NUMBER
+        - DOORBOT_NOTIFICATOR_TWILIO_ID
+        - DOORBOT_NOTIFICATOR_TWILIO_TOKEN
+        - DOORBOT_SERVER_PORT=3000
+        - DOORBOT_USER_ACCOUNTS_DOMAIN

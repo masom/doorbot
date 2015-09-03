@@ -1,0 +1,107 @@
+{
+	"ImportPath": "bitbucket.org/msamson/doorbot-api",
+	"GoVersion": "go1.4.2",
+	"Deps": [
+		{
+			"ImportPath": "code.google.com/p/go.crypto/bcrypt",
+			"Comment": "null-219",
+			"Rev": "00a7d3b31bbab5795b4a51933c04fc2768242970"
+		},
+		{
+			"ImportPath": "code.google.com/p/go.crypto/blowfish",
+			"Comment": "null-219",
+			"Rev": "00a7d3b31bbab5795b4a51933c04fc2768242970"
+		},
+		{
+			"ImportPath": "github.com/Sirupsen/logrus",
+			"Comment": "v0.6.4-18-g273bd59",
+			"Rev": "273bd5984cd7deae8d4b71b0ba9bfc5767f7284b"
+		},
+		{
+			"ImportPath": "github.com/codegangsta/inject",
+			"Comment": "v1.0-rc1-4-g4b81725",
+			"Rev": "4b8172520a03fa190f427bbd284db01b459bfce7"
+		},
+		{
+			"ImportPath": "github.com/gcmurphy/postmark",
+			"Rev": "85d5a1077eb9e1f21bca0da3a84c55166964a50b"
+		},
+		{
+			"ImportPath": "github.com/go-martini/martini",
+			"Comment": "v1.0-85-gbbd489b",
+			"Rev": "bbd489b35fd7eac9aaf442e5671ab21cdd972926"
+		},
+		{
+			"ImportPath": "github.com/google/google-api-go-client/admin/directory_v1",
+			"Rev": "d56f328dc27a4097cd0fc535e7c77807f48a2e84"
+		},
+		{
+			"ImportPath": "github.com/lib/pq",
+			"Comment": "go1.0-cutoff-26-gf7ea31d",
+			"Rev": "f7ea31d05cd1cccff3ba98af46ccc261d4ff3fdd"
+		},
+		{
+			"ImportPath": "github.com/martini-contrib/binding",
+			"Rev": "1928ed2850e7d65507ea4198d935597e43612c7d"
+		},
+		{
+			"ImportPath": "github.com/martini-contrib/render",
+			"Rev": "b65063311fac6cbf84d3538f5715f7847e648322"
+		},
+		{
+			"ImportPath": "github.com/masom/envconfig",
+			"Comment": "v1.0.0-3-g8eb48cc",
+			"Rev": "8eb48cc6f27eafda8e3a9627edba494a1d229a01"
+		},
+		{
+			"ImportPath": "github.com/nlopes/slack",
+			"Rev": "1da32686c2e7143de764729a1d52732047f7aa84"
+		},
+		{
+			"ImportPath": "github.com/oxtoacart/bpool",
+			"Rev": "89c3c7319abbd041bc0a83bdf10bcb8bd445287b"
+		},
+		{
+			"ImportPath": "github.com/satori/go.uuid",
+			"Rev": "a07c134f8289edd9ac6ee6f0aa5f3d345f4aaf27"
+		},
+		{
+			"ImportPath": "github.com/sfreiberg/gotwilio",
+			"Rev": "2b2c5eb138a602f432303d4fb1ed422684994e36"
+		},
+		{
+			"ImportPath": "github.com/stretchr/objx",
+			"Rev": "cbeaeb16a013161a98496fad62933b1d21786672"
+		},
+		{
+			"ImportPath": "github.com/stretchr/testify/assert",
+			"Rev": "d6577e08ec30538639ac0ea38b562b6f250e9055"
+		},
+		{
+			"ImportPath": "github.com/stretchr/testify/mock",
+			"Rev": "d6577e08ec30538639ac0ea38b562b6f250e9055"
+		},
+		{
+			"ImportPath": "github.com/tbruyelle/hipchat-go/hipchat",
+			"Comment": "v1.0-7-g1dd13e1",
+			"Rev": "1dd13e154219c15e2611fe46adbb6bf65db419b7"
+		},
+		{
+			"ImportPath": "golang.org/x/net/context",
+			"Rev": "589db58a47224e5786650dac2677b9c302bab6c2"
+		},
+		{
+			"ImportPath": "golang.org/x/net/websocket",
+			"Rev": "589db58a47224e5786650dac2677b9c302bab6c2"
+		},
+		{
+			"ImportPath": "google.golang.org/api/googleapi",
+			"Rev": "d56f328dc27a4097cd0fc535e7c77807f48a2e84"
+		},
+		{
+			"ImportPath": "gopkg.in/gorp.v1",
+			"Comment": "v1.7.1",
+			"Rev": "c87af80f3cc5036b55b83d77171e156791085e2e"
+		}
+	]
+}
